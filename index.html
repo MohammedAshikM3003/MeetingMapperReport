@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KSRCE Landing Page</title>
+    <!-- Firebase initialization (kept as module) -->
+    <script type="module" src="firebase.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            color: #fff;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .center-logo-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 1s ease;
+            gap: 40px;
+        }
+        .ksrce-logo {
+            width: 340px;
+            max-width: 95vw;
+            border-radius: 25px;
+            box-shadow: 0 8px 36px rgba(0,0,0,0.18);
+            background: white;
+            padding: 30px;
+            margin-bottom: 24px;
+            animation: logoPop 1.2s cubic-bezier(.6,-0.28,.74,.05);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(60px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        @keyframes logoPop {
+            0% { transform: scale(0.7);}
+            80% { transform: scale(1.17);}
+            100% { transform: scale(1);}
+        }
+        .welcome-title {
+            font-size: 3.6rem;
+            font-weight: bold;
+            margin-bottom: 14px;
+            letter-spacing: 0.5px;
+            text-shadow: 0 2px 10px rgba(37,99,235,0.14);
+        }
+        .welcome-desc {
+            font-size: 1.6rem;
+            margin-bottom: 30px;
+            line-height: 1.45;
+            max-width: 540px;
+            text-align: center;
+            color: #eaf2ff;
+        }
+        .button-link {
+            display: inline-block;
+            background: rgba(255,255,255, 0.27);
+            color: #fff;
+            font-size: 1.32rem;
+            padding: 19px 44px;
+            border-radius: 22px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.24s, transform 0.22s;
+            box-shadow: 0 2.6px 17px rgba(30, 64, 175, 0.11);
+            min-width: 260px;
+            text-align: center;
+            user-select: none;
+        }
+        .button-link:hover {
+            background: rgba(255,255,255, 0.47);
+            color: #1e40af;
+            transform: translateY(-3px) scale(1.04);
+        }
+        @media (max-width:600px) {
+            .ksrce-logo { width: 170px; padding: 11.7px; border-radius: 13px;}
+            .welcome-title { font-size: 2.1rem;}
+            .welcome-desc { font-size: 1.1rem;}
+            .center-logo-container { padding: 24px 5px; gap: 26px; }
+            .button-link { min-width: 170px; padding: 13px 21.2px; font-size: 1rem; border-radius: 13px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="center-logo-container">
+        <img src="KSRCE logo.jpg" alt="K.S.R. College of Engineering Logo" class="ksrce-logo" />
+        <div class="welcome-title">Welcome to K.S.R. College of Engineering</div>
+        <div class="welcome-desc">
+            Your Gateway to Innovation & Excellence.<br>
+            Explore our AI-powered projects, student creativity & campus technology solutions.
+        </div>
+        <a href="feature.html" class="button-link">📋 View Features</a>
+    </div>
+</body>
+</html>
